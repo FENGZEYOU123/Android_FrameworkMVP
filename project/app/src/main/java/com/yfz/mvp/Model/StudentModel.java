@@ -28,6 +28,4 @@ public class StudentModel implements StudentModelImpl {
     public List getStudentList() {
         return mStudentList;
     }
-
-
 }
