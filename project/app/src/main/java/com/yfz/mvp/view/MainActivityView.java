@@ -7,20 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.yfz.mvp.R;
 import com.yfz.mvp.bean.StudentBean;
 import com.yfz.mvp.presenter.StudentPresenter;
-
 import java.util.List;
 
 /**
  * Author: 游丰泽
  * Time: 9999/01/01
  * Describe: 探究MVP架构设计
+ * Email: youfengze1995@163.com
  * Github: https://blog.csdn.net/ruiruiddd/article/details/117990466
  */
-public class MainActivityView extends AppCompatActivity implements MainActivityViewListener {
+public class MainActivityView extends AppCompatActivity implements MainActivityViewImpl {
 
     private EditText vEdtName, vEdtGender;
     private Button vBtnAdd,vBtnGetStudentInfo;
@@ -50,7 +49,7 @@ public class MainActivityView extends AppCompatActivity implements MainActivityV
         vBtnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mStudentPresenter.doAddUser(); //响应用户点击按钮操作，通知Presenter做处理
+                mStudentPresenter.addStudent(); //响应用户点击按钮操作，通知Presenter做处理
 
             }
         });

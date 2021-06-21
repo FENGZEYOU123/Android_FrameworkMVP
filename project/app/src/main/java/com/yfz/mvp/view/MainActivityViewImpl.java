@@ -5,9 +5,9 @@ import com.yfz.mvp.bean.StudentBean;
 import java.util.List;
 
 /**
- * View层接口，列出所有 V层 要作的操作
+ * View层接口，在此定义并列出所有 V层 可以进行的操作
  */
-public interface MainActivityViewListener {
+public interface MainActivityViewImpl {
     /**
      * 获取学生姓名 (可以看作提供给 Presenter 调用的方法)
      */
