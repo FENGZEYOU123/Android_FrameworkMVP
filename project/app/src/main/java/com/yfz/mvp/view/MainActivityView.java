@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.yfz.mvp.R;
 import com.yfz.mvp.presenter.StudentPresenter;
 
@@ -79,5 +81,11 @@ public class MainActivityView extends AppCompatActivity implements MainActivityV
         vTvDisplayListNumber.setText(string);
     }
 
+    //假如产品改需求，通过Toast弹窗的显示当前学生人数，
+    //那么我们只需要在V层实现的自身接口改就行了。
+//    @Override
+//    public void updateView_studentNumber(String string) {
+//        Toast.makeText(this,string,Toast.LENGTH_SHORT).show();
+//    }
 
 }
