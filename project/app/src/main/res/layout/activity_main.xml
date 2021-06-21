@@ -5,49 +5,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
-
+    android:padding="24dp"
+    tools:context=".view.MainActivityView">
 
     <EditText
-        android:id="@+id/et_user_name"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:hint="用户名"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/vEdtName"
+        android:hint="请输入学生姓名"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.5" />
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </EditText>
     <EditText
-        android:id="@+id/et_password"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:hint="密码"
+        android:id="@+id/vEdtGender"
+        android:hint="请输入学生性别"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_user_name"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/vEdtName"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </EditText>
 
     <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="登  录"
+        android:id="@+id/vBtnAdd"
+        android:text="添加学生"
+        app:layout_constraintTop_toBottomOf="@+id/vEdtGender"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+    <TextView
+        android:id="@+id/vTvDisplayListNumber"
+        android:text="人数"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/vTvDisplayStudentInfo"
+        android:text="列表信息"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/vTvDisplayListNumber"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:id="@+id/vBtnGetStudentInfo"
+        android:text="刷新列表"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/vTvDisplayStudentInfo"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
