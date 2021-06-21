@@ -1,9 +1,5 @@
 package com.yfz.mvp.view;
 
-import com.yfz.mvp.bean.StudentBean;
-
-import java.util.List;
-
 /**
  * View层接口，在此定义并列出所有 V层 可以进行的操作
  */
@@ -19,9 +15,9 @@ public interface MainActivityViewImpl {
     /**
      * 手动更新View的UI-所有list学生信息
      */
-    void updateView_allStudentInfo(List<StudentBean> list);
+    void updateView_allStudentInfo(String string);
     /**
      * 自动更新View的UI-学生List数量
      */
-    void updateView_studentNumber(int listSize);
+    void updateView_studentNumber(String string);
 }

@@ -19,7 +19,7 @@ public class StudentModel implements StudentModelImpl {
     public void addStudent(String name, String gender, eventAddStudentCallBack studentCallBack) {
         StudentBean studentBean = new StudentBean(name,gender);
         mStudentList.add(studentBean);
-        studentCallBack.completed(mStudentList.size()); //回调返回给P层结果
+        studentCallBack.completed(mStudentList.size()); //回调返回给P层
     }
     /**
      * 返回学生list

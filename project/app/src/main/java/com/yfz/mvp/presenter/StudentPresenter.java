@@ -31,7 +31,8 @@ public class StudentPresenter implements StudentPresenterImpl  {
         mStudentModel.addStudent(name, gender, new StudentModelImpl.eventAddStudentCallBack() {
             @Override
             public void completed(int listSize) {
-                mainActivityView.updateView_studentNumber(listSize);
+
+                mainActivityView.updateView_studentNumber("当前人数: "+listSize);
             }
         });
     }
@@ -42,7 +43,12 @@ public class StudentPresenter implements StudentPresenterImpl  {
     @Override
     public void doRefreshListInfo(){
         List<StudentBean> list  = mStudentModel.getStudentList();
-        mainActivityView.updateView_allStudentInfo(list);
+        String text = "";
+        for(int i=0; i<list.size(); i++){
+            String studentInfo = "\n"+"姓名："+list.get(i).getName() +" 性别: "+ list.get(i).getGender()+"\n";
+            text = text + studentInfo;
+        }
+        mainActivityView.updateView_allStudentInfo(text);
     }
 
 }

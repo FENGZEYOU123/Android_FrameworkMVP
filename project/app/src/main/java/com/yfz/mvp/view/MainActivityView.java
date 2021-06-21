@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.yfz.mvp.R;
-import com.yfz.mvp.bean.StudentBean;
 import com.yfz.mvp.presenter.StudentPresenter;
-import java.util.List;
 
 /**
  * Author: 游丰泽
@@ -72,20 +70,13 @@ public class MainActivityView extends AppCompatActivity implements MainActivityV
     }
 
     @Override
-    public void updateView_allStudentInfo(List<StudentBean> list) {
-        String title = "\n list中所有学生信息：\n";
-        String text = "";
-        for(int i=0; i<list.size(); i++){
-            String studentInfo = "\n"+"姓名："+list.get(i).getName() +" 性别: "+ list.get(i).getGender()+"\n";
-            text = text + studentInfo;
-        }
-        text = text +title;
-        vTvDisplay.setText(text);
+    public void updateView_allStudentInfo(String string) {
+        vTvDisplay.setText(string);
     }
 
     @Override
-    public void updateView_studentNumber(int listSize) {
-        vTvDisplayListNumber.setText("学生人数： "+listSize);
+    public void updateView_studentNumber(String string) {
+        vTvDisplayListNumber.setText(string);
     }
 
 
